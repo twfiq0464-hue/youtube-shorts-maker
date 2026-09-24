@@ -124,6 +124,16 @@ def download_video(url: str, workdir: Path, max_minutes: int) -> Path:
         "no_warnings": True,
         "merge_output_format": "mp4",
         "noplaylist": True,
+        "extractor_args": {
+            "youtube": {
+                "player_client": ["android", "web"],
+            }
+        },
+        "http_headers": {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        },
+        "geo_bypass": True,
+        "nocheckcertificate": True,
     }
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         info = ydl.extract_info(url, download=False)
@@ -454,3 +464,4 @@ with st.expander("ℹ️ ملاحظات مهمة"):
 - الفيديوهات الطويلة جداً قد تستغرق وقتاً أطول في التنزيل والتفريغ والمعالجة.
         """
   )
+
