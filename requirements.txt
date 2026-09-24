@@ -1,5 +1,5 @@
 streamlit
-yt-dlp
+https://github.com/yt-dlp/yt-dlp/archive/refs/heads/master.tar.gz
 groq
 anthropic
 moviepy
