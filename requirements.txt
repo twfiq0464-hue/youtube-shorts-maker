@@ -1,1 +1,6 @@
+streamlit
 yt-dlp
+groq
+anthropic
+moviepy
+requests
